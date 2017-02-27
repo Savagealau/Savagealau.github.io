@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务6</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;}
+        .page{
+            width: 980px;
+            height: 1386px;
+            border: 1px solid #cccccc;
+            margin:100px auto;position: relative}
+        .header{
+            width: 110px;
+            height: 61px;
+            background-color: #d25d5d;
+            position: absolute;
+            left: 44px;
+            font-size:12px;
+            color:#ffffff;font-family: "黑体";}
+        .content{
+            width: 892px;
+            height: 1264px;
+            border-top:2px solid #938e8c;
+            position: absolute;
+            left: 44px;
+            top: 61px;
+            padding:40px 0px;}
+        .header p{position: absolute;
+            left:0;bottom: 0}
+        .date{
+            font-size: 12px;font-family: "黑体";color: #d45d5c;position: absolute;
+            top: 50px;
+            right: 44px;}
+        .content img{
+            width: 641px;
+            height: 301px;}
+        .headaside{float:right;
+            width: 203px;
+            height: 350px;
+            border-top:2px solid #cc8091;
+            box-sizing: border-box;position: relative}
+        .headaside p{
+            line-height: 10px;
+            font:12px "楷体";
+            font-family:"微软雅黑";}
+        .headaside p:nth-of-type(2){
+            font-style: italic;
+            font-size: 116px;color: #75b86b;
+            margin-left:-16px;
+           }
+        .headaside p:nth-of-type(3){
+            font-size: 55px;color: #cc8091;position: absolute;
+            left: 0;
+            bottom: 0;}
+        .headaside p:nth-of-type(4){position: absolute;
+            left: 85px;
+            bottom: 20px;}
+        .headaside p:nth-of-type(5){position: absolute;
+            left: 85px;
+            bottom: 10px;
+            color: #cc8091;;}
+        .content h1,h2{font-size:24px ;color: black;
+            line-height:40px;text-decoration: underline;}
+        .contentMiddleLeft{ width: 210px;
+            height: 220px;float: left;
+            margin:15px 15px 0px 0px;font:12px "微软雅黑";
+            line-height: 16px;}
+        .contentMiddleCenter{ width: 210px;
+            height: 220px;float: left;
+            margin:15px 15px 0px 0px ;font:12px "微软雅黑";
+            line-height: 16px;}
+        .contentMiddleRight{ width: 210px;
+            height: 220px;float: left;
+            margin:15px 15px 0px 0px;font:12px "微软雅黑";
+            line-height: 16px;}
+        .contentMiddleRight span{
+            font:italic 12px "微软雅黑";opacity:0.7;
+            line-height: 16px;color: #cd4a48}
+        .contentMiddleLeft h1{
+            color: green;font-size: 16px;
+            font-weight:bold;
+           }
+        .contentMiddleCenter h1{color: orange;font-size: 16px;
+            font-weight:bold;}
+        .contentMiddleRight h1{color: #ff823a;font-size: 16px;
+            font-weight:bold;}
+        .contentBottomRight img{
+            width: 458px;
+            height: 275px;float: right}
+        .contentBottomLeft{
+            width: 415px;
+            height: 190px;
+            float: left;border-bottom:2px solid black;
+            font:bold 42px "黑体";color: #11456b;
+            line-height: 16;}
+        .contentBottomLeft span{display: inline-block;
+            margin-right:20px;
+            font:italic bold 72px "黑体";
+            color:#f5e327 ;}
+        .contentBottomLeft h1{text-decoration: none}
+        .footerLeft{
+            height: 465px;
+            width: 415px;position: absolute;left:44px;bottom:60px;overflow: hidden}
+        .footerLeft span{
+            font:70px "微软雅黑";color:#f5e327;display: inline-block;
+            float: left;
+            margin-right:10px;
+            line-height:70px;margin-bottom: 10px}
+
+        .footerLeft img{float: right;
+            margin: 10px}
+        .footerLeft p{
+            font:12px "宋体";
+            color: #767777;
+            line-height: 16px}
+        .footerLine{
+            width: 892px;
+            height: 40px;position: absolute;
+            left:44px;
+            bottom: 18px;
+            border-top:2px solid #938e8c ;}
+        .footerRight{
+            width: 458px;
+            height: 350px;
+            background-color: #eeeed6;
+            position: absolute;
+        right:44px;
+            bottom:98px;}
+        .footerRight img{position: absolute;
+            left: 20px;
+            top: 30px;z-index: 3}
+        .footerRight p{position: absolute;left: 45px;
+            top: 30px;
+            line-height:20px;
+            font:16px "宋体";
+            color:#5a5b5b;}
+        .footerRight span{
+            font:italic 12px  "宋体";display: block;float:right }
+        .footerRight .redbox1{
+            width: 260px;
+            height: 160px;
+            background-color: #d55d5c;position: absolute;left:0;bottom: 0;
+            padding: 10px;box-sizing: border-box;
+            font:10px "微软雅黑";color: #ffffff;
+            }
+        .footerRight .redbox1 span{display: inline-block;border-right:2px solid white;
+            margin:6px;
+            padding:6px;
+            font:100px "微软雅黑";color: white;
+            line-height:100px;float: left}
+        .footerRight .redbox1 div{
+            width: 153px;
+            height: 140px;
+        float: right;position: relative}
+        .footerRight .redbox1 div p {position: absolute;
+            top: 13px;
+            left: 0;
+            line-height:24px;font:italic 21px "黑体";color: #ffffff}
+        .footerRight .redbox1 div .helloworld{position: absolute;
+            left: 0;
+            top: 61px;}
+        .rightCorner{
+
+            width: 191px;
+            height: 140px;position: absolute;
+            right:0;
+            bottom: 10px;
+            line-height: 16px;
+            font:italic 12px "宋体";}
+        .rightCorner img[name="1"]{position: absolute;
+            left: 0;
+            top: 0;}
+        .rightCorner p{position: absolute;
+            left:15px;
+            top: 15px;}
+        .rightCorner img[name="2"]{position: absolute;
+            left: 119px;
+            top: 101px;}
+        .footerLine p{float: right;
+            font:12px "黑体";color:#d55d5c }
+
+
+    </style>
+</head>
+
+<body>
+<div class="page">
+    <div class="header">
+    <p>ife.baidu.com</p>
+    </div>
+    <p class="date">2016.03</p>
+    <div class="content">
+        <img src="images/1.png" alt="">
+        <div class="headaside">
+            <h1>ABOUT</h1>
+            <h2>TECHNOLOGE</h2>
+            <p>qweqiwueoqiwueo  ioquweiou q qweiqowueioqw</p>
+            <p>700</p>
+            <p>3.2</p>
+            <p>CSS</p>
+            <P>CEESCEFCECEWSSSC</P>
+        </div>
+        <div class="contentMiddleLeft">
+            <h1>What</h1>
+            <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+        </div>
+        <div class="contentMiddleCenter">
+        <h1>When</h1>
+            <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+        </div>
+        <div class="contentMiddleRight">
+            <h1>How</h1>
+            <p>前端前端前端前端前端前端前端前端前端前端前端前端</p>
+            <br><br><br><br>
+           <p>what--------<span>40%</span></p>
+            <p>what--------<span>30%</span></p>
+            <p>what--------<span>30%</span></p>
+        </div>
+        <div class="contentBottomRight">
+            <img src="images/2.png" alt="">
+        </div>
+        <div class="contentBottomLeft">
+            <h1><span>THE</span> TECHNOLOGE <br>OF FRONT<br>前端技术领域</h1>
+        </div>
+    </div>
+    <div class="footerLeft">
+        <p> <span>前</span>前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端<img src="images/3.png" alt="">端前端前端前端<br>
+            前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端<br>
+            前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端<br>
+            前端端前端前端前前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前前端前
+            前端前前端前前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前前端前端前端前端前端前前端前端前端前
+        </p>
+    </div>
+    <div class="footerRight">
+        <img src="images/tirangle.png" alt="">
+        <p>前端前端前端前端前端前端前端前.............<span>前端</span><br><br>
+           前端前端前端前端前端前端前端前............<span>前短短</span><br><br>
+           前端前端前端前端前端前端前端前.............<span>前端</span></p>
+        <div class="redbox1">
+            <span>0</span>
+            <div>
+                <p>ONE  TWO  THREE  FOUR  FIVE</p>
+                <div class="helloworld">hello world hello world hello world hello world hello world</div>
+            </div>
+
+        </div>
+        <div class="rightCorner">
+            <img src="images/left.png" name="1">
+            <p>hello world hello world hello world hello world hello world hello world hello world</p>
+            <img src="images/right.png" name="2">
+        </div>
+    </div>
+    <div class="footerLine">
+        <p>ife.baidu.com</p>
+    </div>
+</div>
+
+</body>
+</html>
